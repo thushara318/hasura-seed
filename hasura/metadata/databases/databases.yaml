@@ -1,8 +1,9 @@
-- name: bright-hog-89_db
+- name: default
   kind: postgres
   configuration:
     connection_info:
-      database_url: postgres://itsnoa04:HQAShquT2M1r@ep-wild-cake-576091.us-west-2.aws.neon.tech/neondb
+      database_url:
+        from_env: PG_DATABASE_URL
       isolation_level: read-committed
       use_prepared_statements: false
-  tables: "!include bright-hog-89_db/tables/tables.yaml"
+  tables: "!include default/tables/tables.yaml"
